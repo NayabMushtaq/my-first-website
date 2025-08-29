@@ -1,3 +1,7 @@
+/* ===========================
+   STORYFORGE - STYLE.CSS
+   =========================== */
+
 /* Reset */
 * {
   margin: 0;
@@ -106,6 +110,12 @@ p {
   font-weight: bold;
 }
 
+/* About Section */
+.about-section {
+  background: #2a2a2a;
+  border-radius: 12px;
+}
+
 /* Footer */
 footer {
   text-align: center;
@@ -114,4 +124,3 @@ footer {
   color: #fff;
   margin-top: 40px;
 }
-
