@@ -3,33 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Blog</title>
+  <title>StoryForge</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>My Blog</h1>
-    <p>Stories, thoughts, and ideas</p>
-  </header>
 
-  <main class="container">
-    <section class="post-list">
-      <article class="post-card">
-        <h2><a href="post1.html">First Blog Post</a></h2>
-        <p>This is a short summary of my first blog post. Click to read more.</p>
-        <small>Published: August 28, 2025</small>
-      </article>
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#stories">Stories</a>
+    <a href="#about">About</a>
+  </nav>
 
-      <article class="post-card">
-        <h2><a href="post2.html">Second Blog Post</a></h2>
-        <p>Another little story or article goes here. Click to read full post.</p>
-        <small>Published: August 30, 2025</small>
-      </article>
-    </section>
-  </main>
+  <!-- Home -->
+  <section id="home">
+    <h1>Welcome to StoryForge</h1>
+    <p>Discover AI-generated stories and articles. Explore, read, and enjoy creative content crafted by code and imagination!</p>
+  </section>
 
+  <!-- Stories -->
+  <section id="stories">
+    <h2>Stories</h2>
+    <div class="story" onclick="showStory('story1')">Story 1: The Digital Dream</div>
+    <div class="story" onclick="showStory('story2')">Story 2: Code & Quill</div>
+    <div class="story" onclick="showStory('story3')">Story 3: AI Chronicles</div>
+    <p id="story-display" style="margin-top:20px; text-align:center; font-style:italic;"></p>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About This Blog</h2>
+    <p>This blog showcases AI-generated content, stories, and articles. Created as a fun experiment, itâ€™s constantly evolving with new ideas and technology.</p>
+  </section>
+
+  <!-- Button -->
+  <button onclick="alert('Thanks for visiting StoryForge!')">Click me!</button>
+
+  <!-- Footer -->
   <footer>
-    <p>© 2025 My Blog. All rights reserved.</p>
+    &copy; 2025 StoryForge. All rights reserved.
   </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function showStory(story) {
+      const display = document.getElementById('story-display');
+      if(story === 'story1') {
+        display.textContent = "Story 1: In a digital world, code came alive and created dreams beyond imagination...";
+      } else if(story === 'story2') {
+        display.textContent = "Story 2: The quill danced across the screen, weaving tales powered by AI algorithms...";
+      } else if(story === 'story3') {
+        display.textContent = "Story 3: Chronicles of AI took the form of short stories, surprising even their creators...";
+      }
+    }
+  </script>
+
 </body>
 </html>
+
+      
