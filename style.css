@@ -1,89 +1,93 @@
-/* Reset some default browser styles */
+/* ===============================
+   MY BLOG STYLE.CSS
+   =============================== */
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Arial Black', Arial, sans-serif;
 }
 
-/* General body styles */
+/* Body */
 body {
-  font-family: Arial, sans-serif;
+  background: #1a1a1a;
+  color: #fff;
   line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
-  padding: 0;
-  margin: 0;
 }
 
-/* Header styles */
+/* Header */
 header {
-  background: #4a90e2;
-  color: white;
-  padding: 20px;
+  background: linear-gradient(135deg, #ff6600, #ff0066);
+  padding: 50px 20px;
   text-align: center;
+  color: #fff;
 }
-
 header h1 {
-  font-size: 2.5rem;
+  font-size: 3em;
   margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
-
 header p {
-  font-size: 1.2rem;
-  font-weight: 300;
+  font-size: 1.2em;
+  color: #ffd699;
 }
 
-/* Main container */
+/* Container */
 .container {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 0 15px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-/* Blog post card */
+/* Post cards */
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
 .post-card {
-  background: white;
-  margin-bottom: 20px;
-  padding: 20px;
+  background: #222;
+  padding: 25px;
+  border-left: 6px solid #ff6600;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s, background 0.3s;
 }
-
 .post-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  background: #333;
+  transform: translateX(5px);
 }
-
-.post-card h2 {
-  margin-bottom: 10px;
-  font-size: 1.8rem;
-}
-
 .post-card h2 a {
   text-decoration: none;
-  color: #4a90e2;
+  color: #ffcc66;
+  transition: color 0.3s;
 }
-
 .post-card h2 a:hover {
-  text-decoration: underline;
+  color: #ff6600;
 }
-
 .post-card p {
-  margin-bottom: 10px;
-  color: #555;
+  margin: 15px 0;
 }
-
 .post-card small {
-  color: #777;
-  font-size: 0.9rem;
+  color: #aaa;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 15px;
-  margin-top: 30px;
-  background: #333;
-  color: white;
+  padding: 30px 20px;
+  background: #111;
+  color: #aaa;
+  margin-top: 50px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2em;
+  }
+  .post-card {
+    padding: 20px;
+  }
 }
